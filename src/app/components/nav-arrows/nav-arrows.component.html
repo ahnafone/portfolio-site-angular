@@ -1,0 +1,11 @@
+<div class="arrow-container">
+    <div class="arrow">
+        <fa-icon [icon]="faUp"></fa-icon>
+    </div>
+    <div *ngIf="!bottom" class="arrow" [class.show]="show" (click)="navigate(false)" >
+        <fa-icon [icon]="faDown"></fa-icon>
+    </div>
+    <div *ngIf="bottom" class="arrow" [class.show]="show" (click)="navigate(false)" >
+        Back to Top
+    </div>
+</div>

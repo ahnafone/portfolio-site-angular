@@ -1,0 +1,23 @@
+
+<div class="background" [ngSwitch]="page">
+
+    <!-- Cover Page -->
+    <div *ngSwitchCase="1" class="component-container cover">
+        <img src="assets/images/cover.png" alt="cover">
+    </div>
+
+    <!-- Education -->
+    <div *ngSwitchCase="2" class="component-container">
+        <app-education></app-education>
+    </div>
+
+    <div *ngSwitchDefault class="component-container">
+        <p>Error</p>
+    </div>
+</div>
+
+
+
+
+<!-- Helpers -->
+<app-nav-arrows [bottom]="(page == pages)" (output)="navigate($event)" ></app-nav-arrows>

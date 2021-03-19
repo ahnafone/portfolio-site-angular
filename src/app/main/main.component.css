@@ -1,0 +1,36 @@
+:root {
+    --main: #b8e4e6;
+    --main-dark: #03989e;
+    --background: #def0f1;
+    --sub1: #f65454;
+    --sub2: #8174bb;
+    --font: #545454;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-image: linear-gradient(to bottom right, white, var(--background));
+}
+
+
+.component-container {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%; height: 60%;
+}
+
+.cover {
+    transition: width 300ms, height 300ms;
+}
+.cover:hover {
+    width: 65%; height: 65%;
+    transition: width 300ms, height 300ms;
+}

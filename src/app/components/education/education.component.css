@@ -1,0 +1,41 @@
+.outer {
+    position: relative;
+    width: 100%; height: 100%;
+    border-radius: 15px;
+    box-shadow: 4px 4px var(--main-dark);
+    overflow: hidden;
+}
+
+.back-img {
+    width: 100%;
+}
+
+
+.inner {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; height: 80%;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(228, 225, 225, 0.85);
+    border-radius: 15px;
+}
+
+.logo {
+    width: 120px;
+    margin: 40px 100px;
+    margin-right: 25px;
+}
+
+h1 {
+    color: var(--main-dark);
+}
+
+.inner-text {
+    margin: 20px 50px;
+    margin-left: 20px;
+}
