@@ -1,23 +1,30 @@
-
-<div class="background" [ngSwitch]="page">
-
-    <!-- Cover Page -->
-    <div *ngSwitchCase="1" class="component-container cover">
+<!-- Cover Page -->
+<div id="top" class="background" >
+    <div class="component-container cover in-view">
         <img src="assets/images/cover.png" alt="cover">
+        <div class="cta">
+            <a href="https://github.com/ahnafone" target="_blank"><button>Github</button></a>
+            <a href="https://www.linkedin.com/in/ahnav/" target="_blank"><button>LinkedIn</button></a>
+        </div>
     </div>
+</div>
 
-    <!-- Education -->
-    <div *ngSwitchCase="2" class="component-container">
+<!-- Education -->
+<div id="edu" class="background bg-grad-bottom" >
+    <div class="component-container" [class.in-view]="page == 1">
         <app-education></app-education>
     </div>
+</div>
 
-    <div *ngSwitchDefault class="component-container">
-        <p>Error</p>
+<!-- Work -->
+<div id="work" class="background" >
+    <div class="component-container" [class.in-view]="page == 2">
+        <app-work></app-work>
     </div>
 </div>
 
 
 
-
 <!-- Helpers -->
-<app-nav-arrows [bottom]="(page == pages)" (output)="navigate($event)" ></app-nav-arrows>
+<app-nav-arrows></app-nav-arrows>
+<app-page-indicator></app-page-indicator>

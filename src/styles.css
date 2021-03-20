@@ -17,7 +17,7 @@ body {
 	color: var(--font);
 	margin: 0;
 	box-sizing: border-box;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 a {
@@ -38,8 +38,9 @@ button {
 	border-radius: 8px;
 	outline: none;
 	font-size: 1.2rem;
-	padding: 5px 10px;
+	padding: 5px 20px;
 	margin: 15px;
+	cursor: pointer;
 }
 
 .btn-main {

@@ -19,16 +19,21 @@
     z-index: 10;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     background-color: rgba(228, 225, 225, 0.85);
     border-radius: 15px;
 }
+.inner-test {
+    display: flex;
+    justify-content: space-around;
+}
 
 .logo {
     width: 120px;
-    margin: 40px 100px;
-    margin-right: 25px;
+    height: 120px;
+    margin: 40px 75px;
+    margin-right: 10px;
 }
 
 h1 {
@@ -36,6 +41,10 @@ h1 {
 }
 
 .inner-text {
-    margin: 20px 50px;
-    margin-left: 20px;
+    margin: 20px 75px;
+    margin-left: 10px;
+    color: black;
+}
+.inner-text p {
+    line-height: 26px;
 }

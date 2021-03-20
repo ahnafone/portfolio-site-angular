@@ -16,21 +16,59 @@ img {
     width: 100vw;
     height: 100vh;
     position: relative;
-    background-image: linear-gradient(to bottom right, white, var(--background));
+    background-image: linear-gradient(white, var(--background));
+}
+.bg-grad-bottom {
+    background-image: linear-gradient(to top, white, var(--background));
 }
 
 
 .component-container {
+    z-index: 5;
     position: absolute;
-    top: 50%; left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
     width: 60%; height: 60%;
+
+    left: 0;
+    opacity: 0;
+    transition: left 800ms, opacity 500ms;
 }
 
+.in-view {
+    left: 50%;
+    opacity: 1;
+    transition: left 800ms, opacity 500ms;
+}
+
+
 .cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: width 300ms, height 300ms;
 }
 .cover:hover {
     width: 65%; height: 65%;
     transition: width 300ms, height 300ms;
+}
+.cover img {
+    box-shadow: 0 0 8px grey;
+}
+
+
+.cta {
+    position: absolute;
+    top: 80%; left: 50%;
+    transform: translate(-50%, 0);
+}
+.cta button {
+    color: var(--sub1);
+    background-color: white;
+    border: 2px solid var(--sub1);
+    border-radius: 30px;
+}
+.cta button:hover {
+    color: white;
+    background-color: var(--sub1);
 }

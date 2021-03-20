@@ -1,0 +1,7 @@
+<div class="indicator" [class.show]="show">
+    <div
+        *ngFor="let p of pages; let i = index"
+        class="dot" [class.dot-curr]="page == i"
+        (click)="jumpTo(i)" >
+    </div>
+</div>

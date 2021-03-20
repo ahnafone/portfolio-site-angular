@@ -1,0 +1,30 @@
+.indicator {
+    position: fixed;
+    top: 50%; right: 0;
+    transform: translate(0, -50%);
+
+    display: inline-flex;
+    flex-direction: column;
+    opacity: 0;
+}
+
+.dot {
+    width: 10px; height: 10px;
+    background-color: white;
+    border: 2px solid var(--sub1);
+    border-radius: 50%;
+    margin: 20px 30px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+.dot-curr {
+    width: 13px; height: 13px;
+    background-color: var(--sub1);
+    margin-right: 27px;
+    opacity: 1;
+}
+
+.show {
+    opacity: 1;
+    transition: opacity 150ms;
+}

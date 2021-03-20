@@ -1,4 +1,7 @@
-import { Component, HostListener, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { Component, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { ScrollToService } from '@nicky-lenaers/ngx-scroll-to';
+import { Subscription } from 'rxjs';
+import { ScrollService } from '../services/scroll.service';
 
 @Component({
   selector: 'app-main',
@@ -7,50 +10,77 @@ import { Component, HostListener, OnDestroy, OnInit, Renderer2 } from '@angular/
 })
 export class MainComponent implements OnInit, OnDestroy {
 
-  @HostListener('scroll') onScrollHost(e: Event): void {
-    console.log(e);
-  }
-
   scrollListener;
-  pages: number = 2;
   pageHeight: number = 0;
+  pages: string[] = [];
 
   // State Variables
-  page: number = 1;
+  page: number = 0;
+  pageRef: Subscription;
+  prevY: number = 0;
 
-  
+  ignoreScroll = false;
+
+  constructor(private renderer: Renderer2, private scroller: ScrollToService, private scroll: ScrollService) { }
+
+  ngOnInit(): void {
+    this.pages = this.scroll.getPages();
+    this.pageHeight = document.body.scrollHeight / this.pages.length;
 
 
-  constructor(private renderer: Renderer2) {
+    this.pageRef = this.scroll.getPageObs().subscribe(page => {
+      if(page != this.page) {
+        if(!this.ignoreScroll) {
+          this.ignoreScrollTimeout();
+        }
 
-    this.scrollListener = this.renderer.listen('window', 'scroll', e => {
-      //console.log( e.target.scrollingElement.scrollTop );
+        this.page = page;
+        this.prevY = this.pageHeight * page;
+        this.scrollTo();
+      }
     });
 
+    this.scrollListener = this.renderer.listen('window', 'scroll', e => {
+      if(this.ignoreScroll) {
+        return;
+      } else {
+        this.ignoreScrollTimeout();
+      }
 
-    let maxHeight = Math.max(
-      document.body.scrollHeight, document.documentElement.scrollHeight,
-      document.body.offsetHeight, document.documentElement.offsetHeight,
-      document.body.clientHeight, document.documentElement.clientHeight
-    );
-    this.pageHeight = maxHeight / this.pages;
+      let ypos = e.target.scrollingElement.scrollTop;
+      if((this.page+1) == this.pages.length && ypos > this.prevY) {
+        this.prevY = 0;
+        this.scroll.navigate({ top: true });
+      } else if(ypos > this.prevY) {
+        this.prevY = this.pageHeight * (this.page+1);
+        this.scroll.navigate({ down: true });
+      } else if(this.page != 0 && ypos < this.prevY) {
+        this.prevY = this.pageHeight * (this.page-1);
+        this.scroll.navigate({ up: true });
+      }
+    });
   }
-
-  ngOnInit(): void {}
 
   ngOnDestroy(): void {
     this.scrollListener();
+    this.pageRef.unsubscribe();
   }
 
 
-  navigate(output: { up: boolean, down: boolean, top: boolean }) {
-    if(output.up) {
-      // move up
-    } else if(output.down) {
-      // move down
-    } else if(output.top) {
+  ignoreScrollTimeout() {
+    this.ignoreScroll = true;
+    setTimeout(() => {
+      this.ignoreScroll = false;
+    }, 800)
+  }
 
-    }
+  scrollTo() {
+    this.scroller.scrollTo({
+      target: this.pages[this.page]
+    }).subscribe(
+      value => { },
+      err => console.error(err)
+    );
   }
 
 }
