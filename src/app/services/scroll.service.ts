@@ -8,7 +8,7 @@ export class ScrollService {
 
   private ignoreScroll = false;
 
-  private pages: string[] = ["top", "edu", "work"];
+  private pages: string[] = ["top", "edu", "work", "mock", "hair", "music", "mood", "contact"];
   private page: number;
   private pageSub: BehaviorSubject<number>;
 
@@ -28,6 +28,7 @@ export class ScrollService {
 
   ignoreScrollTimeout() {
     this.ignoreScroll = true;
+
     setTimeout(() => {
       this.ignoreScroll = false;
     }, 800)

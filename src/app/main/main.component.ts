@@ -1,7 +1,10 @@
 import { Component, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { ScrollToService } from '@nicky-lenaers/ngx-scroll-to';
 import { Subscription } from 'rxjs';
 import { ScrollService } from '../services/scroll.service';
+
+
 
 @Component({
   selector: 'app-main',
@@ -20,6 +23,10 @@ export class MainComponent implements OnInit, OnDestroy {
   prevY: number = 0;
 
   ignoreScroll = false;
+
+  // Icons
+  faGit = faGithub;
+  faLinkedIn = faLinkedinIn;
 
   constructor(private renderer: Renderer2, private scroller: ScrollToService, private scroll: ScrollService) { }
 

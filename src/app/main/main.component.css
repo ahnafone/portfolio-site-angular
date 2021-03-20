@@ -1,14 +1,13 @@
-:root {
-    --main: #b8e4e6;
-    --main-dark: #03989e;
-    --background: #def0f1;
-    --sub1: #f65454;
-    --sub2: #8174bb;
-    --font: #545454;
-}
 
 img {
     max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+a:hover {
+    text-decoration: none;
 }
 
 
@@ -16,25 +15,27 @@ img {
     width: 100vw;
     height: 100vh;
     position: relative;
-    background-image: linear-gradient(white, var(--background));
+    background-image: linear-gradient(to bottom right, var(--background) 0%, white 33%, white 66%, var(--background) 100%);
+
 }
 .bg-grad-bottom {
-    background-image: linear-gradient(to top, white, var(--background));
+    background-image: linear-gradient(to top right, var(--background) 0%, white 33%, white 66%, var(--background) 100%);
 }
 
 
 .component-container {
     z-index: 5;
     position: absolute;
-    top: 50%;
+    top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     width: 60%; height: 60%;
+}
 
+.out-view {
     left: 0;
     opacity: 0;
     transition: left 800ms, opacity 500ms;
 }
-
 .in-view {
     left: 50%;
     opacity: 1;
@@ -42,6 +43,15 @@ img {
 }
 
 
+.free-container {
+    z-index: 5;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Cover Styles */
 .cover {
     display: flex;
     justify-content: center;
@@ -59,16 +69,95 @@ img {
 
 .cta {
     position: absolute;
-    top: 80%; left: 50%;
-    transform: translate(-50%, 0);
+    top: 80%; right: 10%;
 }
 .cta button {
     color: var(--sub1);
     background-color: white;
     border: 2px solid var(--sub1);
     border-radius: 30px;
+    margin: 0 3px;
 }
 .cta button:hover {
     color: white;
     background-color: var(--sub1);
+}
+
+#cta-primary {
+    color: white;
+    background-color: var(--sub1);
+    margin: 0 10px;
+}
+#cta-primary:hover {
+    color: var(--sub1);
+    background-color: white;
+}
+
+
+/* Contact Styles */
+.contact {
+    text-align: center;
+    line-height: 24px;
+}
+
+.contact h1 {
+    color: var(--main-dark);
+    margin-bottom: 2.5rem;
+    font-size: 2.5rem;
+}
+.contact-text {
+    color: black;
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+
+.chat {
+    display: inline-block;
+    position: relative;
+}
+.chat a {
+    color: black;
+    margin: 10px 0;
+    z-index: 2;
+}
+
+
+.chat div {
+    z-index: -1;
+    width: 100%;
+    height: 5px;
+    background-color: var(--main-dark);
+    position: absolute;
+    bottom: 0; left: 3px;
+}
+.chat:hover div {
+    height: 10px;
+    transition: height 200ms;
+}
+
+.contact-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-cta div {
+    width: 50px; height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#cta-git {
+    color: var(--font);
+    background-image: linear-gradient(to bottom right, white, #b6b6b6);
+    border: 2px solid var(--font);
+}
+#cta-link {
+    color: #0A66C2;
+    background-image: linear-gradient(to bottom right, white, #8dc0f3);
+    border: 2px solid #0A66C2;
 }

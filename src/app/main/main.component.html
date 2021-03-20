@@ -1,25 +1,74 @@
 <!-- Cover Page -->
 <div id="top" class="background" >
-    <div class="component-container cover in-view">
+    <div class="component-container cover">
         <img src="assets/images/cover.png" alt="cover">
         <div class="cta">
-            <a href="https://github.com/ahnafone" target="_blank"><button>Github</button></a>
-            <a href="https://www.linkedin.com/in/ahnav/" target="_blank"><button>LinkedIn</button></a>
+            <a href="https://www.linkedin.com/in/ahnav/" target="_blank"><button id="cta-primary">Let's Chat</button></a>
+            <a href="https://github.com/ahnafone" target="_blank"><button> <fa-icon [icon]="faGit"></fa-icon> </button></a>
+            <a href="https://www.linkedin.com/in/ahnav/" target="_blank"><button> <fa-icon [icon]="faLinkedIn"></fa-icon> </button></a>
         </div>
     </div>
 </div>
 
 <!-- Education -->
 <div id="edu" class="background bg-grad-bottom" >
-    <div class="component-container" [class.in-view]="page == 1">
+    <div class="component-container" [class.out-view]="page != 1" [class.in-view]="page == 1">
         <app-education></app-education>
     </div>
 </div>
 
 <!-- Work -->
 <div id="work" class="background" >
-    <div class="component-container" [class.in-view]="page == 2">
+    <div class="component-container" [class.out-view]="page != 2" [class.in-view]="page == 2">
         <app-work></app-work>
+    </div>
+</div>
+
+<!-- Projects -->
+<div id="mock" class="background bg-grad-bottom" >
+    <div class="free-container" [class.out-view]="page != 3" [class.in-view]="page == 3">
+        <app-mock></app-mock>
+    </div>
+</div>
+
+<div id="hair" class="background" >
+    <div class="free-container" [class.out-view]="page != 4" [class.in-view]="page == 4">
+        <app-hair></app-hair>
+    </div>
+</div>
+
+<div id="music" class="background bg-grad-bottom" >
+    <div class="free-container" [class.out-view]="page != 5" [class.in-view]="page == 5">
+        <p>Hello</p>
+    </div>
+</div>
+
+<div id="mood" class="background" >
+    <div class="free-container" [class.out-view]="page != 6" [class.in-view]="page == 6">
+        <p>Hello</p>
+    </div>
+</div>
+
+
+<!-- Contact -->
+<div id="contact" class="background bg-grad-bottom" >
+    <div class="free-container contact" [class.out-view]="page != 7" [class.in-view]="page == 7">
+        <h1>Contact</h1>
+        <div class="contact-text">
+            I'm currently actively searching for freelance opportunities. <br>
+            If you like my work, then <div class="chat"><a href="https://www.linkedin.com/in/ahnav/" target="_blank">let's chat!</a> <div></div> </div>
+        </div>
+
+        <p style="font-size: 0.9; font-weight: bold; margin-top: 3rem; margin-bottom: 1rem;">You can reach out</p>
+        <p>
+            <span style="color: grey; font-size: 0.7rem;">Edmonton, AB &nbsp; • &nbsp; Dhaka, Bangladesh</span> <br>
+            <span style="font-size: 1.3rem;"> <a href="mailto:ahnafon3@gmail.com">ahnafon3@gmail.com</a> </span>
+        </p>
+
+        <div class="contact-cta">
+            <div id="cta-git"> <a href="https://github.com/ahnafone" target="_blank"><fa-icon [icon]="faGit"></fa-icon>  </a> </div>
+            <div id="cta-link"> <a href="https://www.linkedin.com/in/ahnav/" target="_blank">  <fa-icon [icon]="faLinkedIn"></fa-icon>  </a></div>
+        </div>
     </div>
 </div>
 

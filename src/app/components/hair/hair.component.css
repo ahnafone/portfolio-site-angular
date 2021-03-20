@@ -1,0 +1,73 @@
+.container {
+    position: relative;
+    width: 80vw;
+    height: 80vh;
+}
+
+
+h1 {
+    color: var(--main-dark);
+    text-align: center;
+}
+
+.logo {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+
+    font-family: 'Satisfy', cursive;
+    color: #D19897;
+    font-size: 2.75rem;
+    margin: 0;
+}
+
+.tech {
+    position: absolute;
+    bottom: 2%;
+    left: 5%;
+
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: grey;
+    margin: 0;
+}
+
+
+.img-1 {
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 1;
+}
+
+.img-2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+}
+
+
+.outer {
+    flex: 1;
+    margin: 10px;
+    width: 82vh; height: 55vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner {
+    width: 79vh; height: 53vh;
+    transition: width 300ms;
+    overflow: hidden;
+    box-shadow: 0 0 5px grey;
+    border-radius: 15px;
+}
+.inner:hover {
+    width: 82vh; height: 55vh;
+    transition: width 300ms;
+}
+
+.inner img {
+    width: 100%;
+}

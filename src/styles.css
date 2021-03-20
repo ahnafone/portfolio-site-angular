@@ -1,9 +1,10 @@
 :root {
 	--main: #b8e4e6;
 	--main-dark: #03989e;
-	--background: #def0f1;
+	--background: #ebffff;
 	--sub1: #f65454;
 	--sub2: #8174bb;
+	--sub3: #3949ab;
 	--font: #545454;
 }
 
@@ -18,6 +19,11 @@ body {
 	margin: 0;
 	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+	color: var(--main-dark);
+	font-weight: 700;
 }
 
 a {

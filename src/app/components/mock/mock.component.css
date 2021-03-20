@@ -1,0 +1,53 @@
+h1 {
+    color: var(--main-dark);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.floating-title {
+    color: var(--sub1);
+    font-size: 2.5rem;
+    position: absolute;
+    top: -20%; left: 50%;
+    margin: 0;
+    transform: translate(-50%, 0);
+}
+
+.tech {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: grey;
+}
+
+
+.project-imgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer {
+    flex: 1;
+    margin: 10px;
+    width: 67vh; height: 45vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner {
+    width: 64vh; height: 42vh;
+    transition: width 300ms;
+    overflow: hidden;
+    box-shadow: 0 0 5px grey;
+    border-radius: 15px;
+}
+.inner:hover {
+    width: 67vh; height: 45vh;
+    transition: width 300ms;
+}
+
+.project-imgs img {
+    width: 100%;
+}
