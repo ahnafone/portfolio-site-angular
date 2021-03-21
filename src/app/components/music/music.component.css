@@ -1,0 +1,64 @@
+.outer {
+    position: relative;
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner {
+    width: 67vw; padding-top: 56.25%;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 3px 3px 15px grey;
+    transition: width 300ms, padding-top 300ms;
+
+    position: relative;
+    cursor: pointer;
+}
+.inner:hover {
+    width: 70vw;
+    transition: width 300ms, padding-top 300ms;
+}
+
+img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.cta {
+    position: absolute;
+    top: 10%; right: 5%;
+}
+.cta-btn {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--sub1);
+    background-color: white;
+    border: 2px solid var(--sub1);
+    border-radius: 30px;
+    margin: 0 3px;
+}
+.cta-btn:hover {
+    color: white;
+    background-color: var(--sub1);
+}
+
+.cta-primary {
+    color: white;
+    background-color: var(--sub1);
+}
+.cta-primary:hover {
+    color: var(--sub1);
+    background-color: white;
+}
+
+.cta p {
+    text-align: right;
+    font-size: 0.8rem;
+    color: white;
+    margin-top: 1.5rem;
+}

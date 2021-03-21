@@ -12,9 +12,14 @@ h1 {
 
 .logo {
     position: absolute;
-    top: 5%;
-    right: 10%;
-
+    top: 2%;
+    right: 2%;
+    text-align: right;
+    max-width: 30vw;
+    font-size: 0.8rem;
+    color: grey;
+}
+.logo-text {
     font-family: 'Satisfy', cursive;
     color: #D19897;
     font-size: 2.75rem;
@@ -24,8 +29,9 @@ h1 {
 .tech {
     position: absolute;
     bottom: 2%;
-    left: 5%;
+    left: 2%;
 
+    max-width: 30vw;
     margin-top: 2rem;
     font-size: 0.8rem;
     color: grey;
@@ -50,24 +56,29 @@ h1 {
 .outer {
     flex: 1;
     margin: 10px;
-    width: 82vh; height: 55vh;
+    width: 45vw;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .inner {
-    width: 79vh; height: 53vh;
-    transition: width 300ms;
+    width: 43vw; padding-top: 56.25%;
     overflow: hidden;
     box-shadow: 0 0 5px grey;
     border-radius: 15px;
+    transition: width 300ms;
+    position: relative;
 }
 .inner:hover {
-    width: 82vh; height: 55vh;
+    width: 45vw;
     transition: width 300ms;
 }
 
 .inner img {
     width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }

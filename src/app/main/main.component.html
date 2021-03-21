@@ -39,13 +39,13 @@
 
 <div id="music" class="background bg-grad-bottom" >
     <div class="free-container" [class.out-view]="page != 5" [class.in-view]="page == 5">
-        <p>Hello</p>
+        <app-music></app-music>
     </div>
 </div>
 
 <div id="mood" class="background" >
     <div class="free-container" [class.out-view]="page != 6" [class.in-view]="page == 6">
-        <p>Hello</p>
+        <app-moodtracker></app-moodtracker>
     </div>
 </div>
 
@@ -66,8 +66,20 @@
         </p>
 
         <div class="contact-cta">
-            <div id="cta-git"> <a href="https://github.com/ahnafone" target="_blank"><fa-icon [icon]="faGit"></fa-icon>  </a> </div>
-            <div id="cta-link"> <a href="https://www.linkedin.com/in/ahnav/" target="_blank">  <fa-icon [icon]="faLinkedIn"></fa-icon>  </a></div>
+            <div class="cta-outer">
+                <div id="" class="cta-inner cta-git">
+                    <a href="https://github.com/ahnafone" target="_blank">
+                        <fa-icon [icon]="faGit"></fa-icon>
+                    </a>
+                </div>
+            </div>
+            <div class="cta-outer">
+                <div class="cta-inner cta-link">
+                    <a href="https://www.linkedin.com/in/ahnav/" target="_blank">
+                        <fa-icon [icon]="faLinkedIn"></fa-icon>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

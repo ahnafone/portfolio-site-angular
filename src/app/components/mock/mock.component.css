@@ -8,7 +8,7 @@ h1 {
     color: var(--sub1);
     font-size: 2.5rem;
     position: absolute;
-    top: -20%; left: 50%;
+    top: -10%; left: 50%;
     margin: 0;
     transform: translate(-50%, 0);
 }
@@ -30,24 +30,29 @@ h1 {
 .outer {
     flex: 1;
     margin: 10px;
-    width: 67vh; height: 45vh;
+    width: 35vw;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .inner {
-    width: 64vh; height: 42vh;
+    width: 33vw; padding-top: 56.25%;
     transition: width 300ms;
     overflow: hidden;
     box-shadow: 0 0 5px grey;
     border-radius: 15px;
+    position: relative;
 }
 .inner:hover {
-    width: 67vh; height: 45vh;
+    width: 35vw;
     transition: width 300ms;
 }
 
 .project-imgs img {
     width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }

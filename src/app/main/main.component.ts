@@ -4,8 +4,6 @@ import { ScrollToService } from '@nicky-lenaers/ngx-scroll-to';
 import { Subscription } from 'rxjs';
 import { ScrollService } from '../services/scroll.service';
 
-
-
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -18,7 +16,7 @@ export class MainComponent implements OnInit, OnDestroy {
   pages: string[] = [];
 
   // State Variables
-  page: number = 0;
+  page: number = -1;
   pageRef: Subscription;
   prevY: number = 0;
 
@@ -66,6 +64,8 @@ export class MainComponent implements OnInit, OnDestroy {
         this.scroll.navigate({ up: true });
       }
     });
+
+    this.scroll.jumpToPage(2);
   }
 
   ngOnDestroy(): void {
@@ -83,7 +83,8 @@ export class MainComponent implements OnInit, OnDestroy {
 
   scrollTo() {
     this.scroller.scrollTo({
-      target: this.pages[this.page]
+      target: this.pages[this.page],
+      duration: 450,
     }).subscribe(
       value => { },
       err => console.error(err)

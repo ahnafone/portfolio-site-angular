@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>MoodTracker</h1>
+
+    <div class="gallery">
+        <div *ngFor="let blank of lst; let i = index" class="gl-outer">
+            <div class="gl-inner">
+                <div class="gl-item">
+                    <a href="{{ 'assets/images/moodtracker/'+(i+1)+'.png' }}" target="_blank">
+                        <img src="{{ 'assets/images/moodtracker/'+(i+1)+'.png' }}" alt="{{ 'moodtracker-screenshot-' + (i+1) }}">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p><em>You can click on an image to view in fullscreen</em></p>
+    <div class="desc">
+        <p>
+            A social media app that you can use to track your moods, and share it with your friends!
+            I created this app with my friends for my CMPUT 301 course.
+        </p>
+        <p>
+            Technologies used: <strong>Android Studio and Firebase Cloud Firestore.</strong> <br>
+            You can also <a href="https://github.com/CMPUT301F19T31/NeedArraysBoss/" target="_blank">check out the repo on Github.</a>
+        </p>
+    </div>
+    
+    
+</div>

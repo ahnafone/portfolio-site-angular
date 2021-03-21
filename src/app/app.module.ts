@@ -12,6 +12,8 @@ import { PageIndicatorComponent } from './components/page-indicator/page-indicat
 import { WorkComponent } from './components/work/work.component';
 import { MockComponent } from './components/mock/mock.component';
 import { HairComponent } from './components/hair/hair.component';
+import { MusicComponent } from './components/music/music.component';
+import { MoodtrackerComponent } from './components/moodtracker/moodtracker.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { HairComponent } from './components/hair/hair.component';
     PageIndicatorComponent,
     WorkComponent,
     MockComponent,
-    HairComponent
+    HairComponent,
+    MusicComponent,
+    MoodtrackerComponent
   ],
   imports: [
     BrowserModule,
