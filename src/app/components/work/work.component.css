@@ -29,7 +29,7 @@ h1 {
 }
 
 .space-btm {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 .triangle {
     width: 0; height: 0;
@@ -62,7 +62,7 @@ h1 {
 .skill-label {
     display: inline-block;
     font-weight: 700;
-    margin-right: 4rem;
+    margin-right: 2rem;
     width: 20%;
     color: black;
     position: relative;
