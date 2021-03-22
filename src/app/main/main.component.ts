@@ -1,6 +1,6 @@
-import { Component, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, QueryList, Renderer2, ViewChildren } from '@angular/core';
+import { NgModel } from '@angular/forms';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-import { ScrollToService } from '@nicky-lenaers/ngx-scroll-to';
 import { Subscription } from 'rxjs';
 import { ScrollService } from '../services/scroll.service';
 
@@ -9,10 +9,11 @@ import { ScrollService } from '../services/scroll.service';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css']
 })
-export class MainComponent implements OnInit, OnDestroy {
+export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
+
+  @ViewChildren("pageElem") pageElems: QueryList<ElementRef>;
 
   scrollListener;
-  pageHeight: number = 0;
   pages: string[] = [];
 
   // State Variables
@@ -21,17 +22,40 @@ export class MainComponent implements OnInit, OnDestroy {
   prevY: number = 0;
 
   ignoreScroll = false;
+  ignoreTimer;
 
   // Icons
   faGit = faGithub;
   faLinkedIn = faLinkedinIn;
 
-  constructor(private renderer: Renderer2, private scroller: ScrollToService, private scroll: ScrollService) { }
+  constructor(private renderer: Renderer2, private scroll: ScrollService,) { }
 
   ngOnInit(): void {
     this.pages = this.scroll.getPages();
-    this.pageHeight = document.body.scrollHeight / this.pages.length;
 
+    this.scrollListener = this.renderer.listen('window', 'scroll', e => {
+      let ypos = e.target.scrollingElement.scrollTop;
+      let prev = this.prevY;
+
+      if(!this.ignoreScroll) {
+        this.ignoreScrollTimeout();
+
+        clearTimeout(this.ignoreTimer);
+        this.ignoreTimer = setTimeout(() => {
+          if(this.page != (this.pages.length-1) && ypos > prev) {
+            this.scroll.navigate({ down: true });
+          } else if(this.page != 0 && ypos < prev) {
+            this.scroll.navigate({ up: true });
+          }
+        }, 500);
+      }
+
+      this.prevY = ypos;
+    });
+  }
+
+  ngAfterViewInit(): void {
+    console.log(this.pageElems);
 
     this.pageRef = this.scroll.getPageObs().subscribe(page => {
       if(page != this.page) {
@@ -40,32 +64,9 @@ export class MainComponent implements OnInit, OnDestroy {
         }
 
         this.page = page;
-        this.prevY = this.pageHeight * page;
-        this.scrollTo();
+        this.scrollTo(page);
       }
     });
-
-    this.scrollListener = this.renderer.listen('window', 'scroll', e => {
-      if(this.ignoreScroll) {
-        return;
-      } else {
-        this.ignoreScrollTimeout();
-      }
-
-      let ypos = e.target.scrollingElement.scrollTop;
-      if((this.page+1) == this.pages.length && ypos > this.prevY) {
-        this.prevY = 0;
-        this.scroll.navigate({ top: true });
-      } else if(ypos > this.prevY) {
-        this.prevY = this.pageHeight * (this.page+1);
-        this.scroll.navigate({ down: true });
-      } else if(this.page != 0 && ypos < this.prevY) {
-        this.prevY = this.pageHeight * (this.page-1);
-        this.scroll.navigate({ up: true });
-      }
-    });
-
-    this.scroll.jumpToPage(2);
   }
 
   ngOnDestroy(): void {
@@ -81,14 +82,10 @@ export class MainComponent implements OnInit, OnDestroy {
     }, 800)
   }
 
-  scrollTo() {
-    this.scroller.scrollTo({
-      target: this.pages[this.page],
-      duration: 450,
-    }).subscribe(
-      value => { },
-      err => console.error(err)
-    );
+  scrollTo(i: number) {
+    this.scrollToService.scrollTo({
+
+    });
   }
 
 }

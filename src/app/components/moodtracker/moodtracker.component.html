@@ -2,7 +2,7 @@
     <h1>MoodTracker</h1>
 
     <div class="gallery">
-        <div *ngFor="let blank of lst; let i = index" class="gl-outer">
+        <div *ngFor="let blank of lst; let i = index" class="gl-outer" #mood>
             <div class="gl-inner">
                 <div class="gl-item">
                     <a href="{{ 'assets/images/moodtracker/'+(i+1)+'.png' }}" target="_blank">
@@ -11,6 +11,8 @@
                 </div>
             </div>
         </div>
+        <div class="nav nav-left" [class.show]="curr != 0" (click)="navigate(false)" > <fa-icon [icon]="faLeft"></fa-icon> </div>
+        <div class="nav nav-right" [class.show]="curr != 7" (click)="navigate(true)" > <fa-icon [icon]="faRight"></fa-icon> </div>
     </div>
 
     <p><em>You can click on an image to view in fullscreen</em></p>

@@ -63,6 +63,7 @@ export class ScrollService {
     if(i >= 0 && i < this.pages.length) {
       this.page = i;
       this.pageSub.next(i);
+
     }
   }
 }

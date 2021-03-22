@@ -1,5 +1,5 @@
 <!-- Cover Page -->
-<div id="top" class="background" >
+<div id="top" class="background" #pageElem>
     <div class="component-container cover">
         <img src="assets/images/cover.png" alt="cover">
         <div class="cta">
@@ -11,39 +11,39 @@
 </div>
 
 <!-- Education -->
-<div id="edu" class="background bg-grad-bottom" >
+<div id="edu" class="background bg-grad-bottom" #pageElem>
     <div class="component-container" [class.out-view]="page != 1" [class.in-view]="page == 1">
         <app-education></app-education>
     </div>
 </div>
 
 <!-- Work -->
-<div id="work" class="background" >
+<div id="work" class="background" #pageElem>
     <div class="component-container" [class.out-view]="page != 2" [class.in-view]="page == 2">
         <app-work></app-work>
     </div>
 </div>
 
 <!-- Projects -->
-<div id="mock" class="background bg-grad-bottom" >
+<div id="mock" class="background bg-grad-bottom" #pageElem>
     <div class="free-container" [class.out-view]="page != 3" [class.in-view]="page == 3">
         <app-mock></app-mock>
     </div>
 </div>
 
-<div id="hair" class="background" >
+<div id="hair" class="background" #pageElem>
     <div class="free-container" [class.out-view]="page != 4" [class.in-view]="page == 4">
         <app-hair></app-hair>
     </div>
 </div>
 
-<div id="music" class="background bg-grad-bottom" >
+<div id="music" class="background bg-grad-bottom" #pageElem>
     <div class="free-container" [class.out-view]="page != 5" [class.in-view]="page == 5">
         <app-music></app-music>
     </div>
 </div>
 
-<div id="mood" class="background" >
+<div id="mood" class="background" #pageElem>
     <div class="free-container" [class.out-view]="page != 6" [class.in-view]="page == 6">
         <app-moodtracker></app-moodtracker>
     </div>
@@ -51,7 +51,7 @@
 
 
 <!-- Contact -->
-<div id="contact" class="background bg-grad-bottom" >
+<div id="contact" class="background bg-grad-bottom" #pageElem>
     <div class="free-container contact" [class.out-view]="page != 7" [class.in-view]="page == 7">
         <h1>Contact</h1>
         <div class="contact-text">
