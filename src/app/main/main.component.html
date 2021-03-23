@@ -1,62 +1,73 @@
 <!-- Cover Page -->
-<div id="top" class="background" #pageElem>
-    <div class="component-container cover">
+<div id="top" class="background" >
+    <div class="cover">
         <img src="assets/images/cover.png" alt="cover">
         <div class="cta">
-            <a href="https://www.linkedin.com/in/ahnav/" target="_blank"><button id="cta-primary">Let's Chat</button></a>
+            <a href="mailto:ahnafon3@gmail.com"><button id="cta-primary">Let's Chat</button></a>
             <a href="https://github.com/ahnafone" target="_blank"><button> <fa-icon [icon]="faGit"></fa-icon> </button></a>
             <a href="https://www.linkedin.com/in/ahnav/" target="_blank"><button> <fa-icon [icon]="faLinkedIn"></fa-icon> </button></a>
         </div>
     </div>
 </div>
 
+
 <!-- Education -->
-<div id="edu" class="background bg-grad-bottom" #pageElem>
+<div id="edu" class="background bg-grad-bottom" >
     <div class="component-container" [class.out-view]="page != 1" [class.in-view]="page == 1">
         <app-education></app-education>
     </div>
 </div>
 
+
 <!-- Work -->
-<div id="work" class="background" #pageElem>
+<div id="work" class="background" >
     <div class="component-container" [class.out-view]="page != 2" [class.in-view]="page == 2">
         <app-work></app-work>
     </div>
 </div>
 
+
 <!-- Projects -->
-<div id="mock" class="background bg-grad-bottom" #pageElem>
+<div id="proj-start" class="background bg-grad-bottom" >
     <div class="free-container" [class.out-view]="page != 3" [class.in-view]="page == 3">
+        <h1>My Projects</h1>
+        <p>The next few pages is a combination of my best projects in no specific order. <br>
+            It contains my freelance, personal, and university projects.</p>
+    </div>
+</div>
+
+<div id="mood" class="background" >
+    <div class="free-container" [class.out-view]="page != 4" [class.in-view]="page == 4">
+        <app-moodtracker></app-moodtracker>
+    </div>
+</div>
+
+<div id="mock" class="background bg-grad-bottom" >
+    <div class="free-container" [class.out-view]="page != 5" [class.in-view]="page == 5">
         <app-mock></app-mock>
     </div>
 </div>
 
-<div id="hair" class="background" #pageElem>
-    <div class="free-container" [class.out-view]="page != 4" [class.in-view]="page == 4">
+<div id="hair" class="background" >
+    <div class="free-container" [class.out-view]="page != 6" [class.in-view]="page == 6">
         <app-hair></app-hair>
     </div>
 </div>
 
-<div id="music" class="background bg-grad-bottom" #pageElem>
-    <div class="free-container" [class.out-view]="page != 5" [class.in-view]="page == 5">
+<div id="music" class="background bg-grad-bottom" >
+    <div class="free-container" [class.out-view]="page != 7" [class.in-view]="page == 7">
         <app-music></app-music>
-    </div>
-</div>
-
-<div id="mood" class="background" #pageElem>
-    <div class="free-container" [class.out-view]="page != 6" [class.in-view]="page == 6">
-        <app-moodtracker></app-moodtracker>
     </div>
 </div>
 
 
 <!-- Contact -->
-<div id="contact" class="background bg-grad-bottom" #pageElem>
-    <div class="free-container contact" [class.out-view]="page != 7" [class.in-view]="page == 7">
+<div id="contact" class="background" >
+    <div class="free-container contact" [class.out-view]="page != 8" [class.in-view]="page == 8">
         <h1>Contact</h1>
         <div class="contact-text">
             I'm currently actively searching for freelance opportunities. <br>
-            If you like my work, then <div class="chat"><a href="https://www.linkedin.com/in/ahnav/" target="_blank">let's chat!</a> <div></div> </div>
+            If you like my work, then <div class="chat"><a href="mailto:ahnafon3@gmail.com">let's chat!</a> <div></div> </div>
         </div>
 
         <p style="font-size: 0.9; font-weight: bold; margin-top: 3rem; margin-bottom: 1rem;">You can reach out</p>
@@ -87,5 +98,6 @@
 
 
 <!-- Helpers -->
+<app-header></app-header>
 <app-nav-arrows></app-nav-arrows>
 <app-page-indicator></app-page-indicator>

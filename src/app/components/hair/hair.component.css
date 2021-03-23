@@ -9,6 +9,9 @@ h1 {
     color: var(--main-dark);
     text-align: center;
 }
+p {
+    line-height: 1.35rem;
+}
 
 .logo {
     position: absolute;

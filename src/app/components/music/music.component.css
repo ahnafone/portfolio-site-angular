@@ -1,23 +1,50 @@
-.outer {
-    position: relative;
-    width: 70vw;
+.container {
     display: flex;
-    justify-content: center;
+}
+
+.desc {
+    width: 30vw;
+    margin-left: 3rem;
+}
+.title {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
+h1 {
+    color: var(--sub1);
+    margin: 0;
+}
+p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+}
+a {
+    color: var(--main-dark);
+}
+
+
+
+.outer {
+    width: 50vw; height: 40vh;
+    position: relative;
+}
+
 .inner {
-    width: 67vw; padding-top: 56.25%;
+    width: 47vw; padding-top: 56.25%;
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 3px 3px 15px grey;
     transition: width 300ms, padding-top 300ms;
 
-    position: relative;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
     cursor: pointer;
 }
 .inner:hover {
-    width: 70vw;
+    width: 50vw;
     transition: width 300ms, padding-top 300ms;
 }
 
@@ -29,22 +56,23 @@ img {
     right: 0;
 }
 
-.cta {
-    position: absolute;
-    top: 10%; right: 5%;
-}
 .cta-btn {
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 700;
     color: var(--sub1);
     background-color: white;
     border: 2px solid var(--sub1);
     border-radius: 30px;
     margin: 0 3px;
+    padding: 5px 10px;
 }
 .cta-btn:hover {
     color: white;
     background-color: var(--sub1);
+}
+
+.cta-btn fa-icon {
+    font-size: 1rem;
 }
 
 .cta-primary {
@@ -54,11 +82,4 @@ img {
 .cta-primary:hover {
     color: var(--sub1);
     background-color: white;
-}
-
-.cta p {
-    text-align: right;
-    font-size: 0.8rem;
-    color: white;
-    margin-top: 1.5rem;
 }

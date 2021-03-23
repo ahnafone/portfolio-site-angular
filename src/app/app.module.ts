@@ -15,6 +15,7 @@ import { MusicComponent } from './components/music/music.component';
 import { MoodtrackerComponent } from './components/moodtracker/moodtracker.component';
 
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
     MockComponent,
     HairComponent,
     MusicComponent,
-    MoodtrackerComponent
+    MoodtrackerComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

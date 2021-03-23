@@ -22,13 +22,13 @@ export class MoodtrackerComponent implements OnInit {
 
 
   navigate(dir) {
-    if(dir) {
+    if(dir && this.curr != 7) {
       if(this.curr == 6) {
         this.curr = 7;
       } else {
         this.curr += 3;
       }
-    } else {
+    } else if(!dir && this.curr != 0) {
       if(this.curr == 1) {
         this.curr = 0;
       } else {

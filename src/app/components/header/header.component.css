@@ -1,0 +1,41 @@
+.container {
+    position: fixed;
+    top: -6rem; left: 0; right: 0;
+    z-index: 10;
+
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+
+    opacity: 0;
+    transition: opacity 150ms, top 300ms;
+}
+
+.container span {
+    cursor: pointer;
+}
+
+.name {
+    font-weight: 700;
+    color: var(--main-dark);
+}
+.name:hover {
+    color: var(--main);
+}
+
+.contact {
+    color: var(--sub1);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.contact:hover {
+    color: rgb(247, 165, 150);
+}
+
+.show {
+    top: 0;
+    opacity: 1;
+    transition: opacity 400ms, top 300ms;
+}

@@ -8,7 +8,7 @@ export class ScrollService {
 
   private ignoreScroll = false;
 
-  private pages: string[] = ["top", "edu", "work", "mock", "hair", "music", "mood", "contact"];
+  private pages: string[] = ["top", "edu", "work", "proj-start", "mood", "mock", "hair", "music", "contact"];
   private page: number;
   private pageSub: BehaviorSubject<number>;
 

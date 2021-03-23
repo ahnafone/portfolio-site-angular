@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, QueryList, Renderer2, ViewChildren } from '@angular/core';
+import { Component, OnDestroy, OnInit, Renderer2 } from '@angular/core';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { ScrollToService } from '@nicky-lenaers/ngx-scroll-to';
 import { Subscription } from 'rxjs';
@@ -9,9 +9,7 @@ import { ScrollService } from '../services/scroll.service';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css']
 })
-export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
-
-  @ViewChildren("pageElem") pageElems: QueryList<ElementRef>;
+export class MainComponent implements OnInit, OnDestroy {
 
   scrollListener;
   pages: string[] = [];
@@ -33,6 +31,17 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnInit(): void {
     this.pages = this.scroll.getPages();
 
+    this.pageRef = this.scroll.getPageObs().subscribe(page => {
+      if(page != this.page) {
+        if(!this.ignoreScroll) {
+          this.ignoreScrollTimeout();
+        }
+
+        this.page = page;
+        this.scrollTo(page);
+      }
+    });
+
     this.scrollListener = this.renderer.listen('window', 'scroll', e => {
       let ypos = e.target.scrollingElement.scrollTop;
       let prev = this.prevY;
@@ -48,21 +57,11 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
       }
 
       this.prevY = ypos;
-      console.log({ ypos, prev: this.prevY });
     });
-  }
 
-  ngAfterViewInit(): void {
-    this.pageRef = this.scroll.getPageObs().subscribe(page => {
-      if(page != this.page) {
-        if(!this.ignoreScroll) {
-          this.ignoreScrollTimeout();
-        }
 
-        this.page = page;
-        this.scrollTo(page);
-      }
-    });
+    // Test Code
+    this.scroll.jumpToPage(2);
   }
 
   ngOnDestroy(): void {
@@ -83,7 +82,7 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
       target: this.pages[i],
       duration: 450
     }).subscribe(
-      value => { console.log(value) },
+      () => {},
       err => console.error(err)
     );
   }

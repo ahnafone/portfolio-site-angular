@@ -1,11 +1,9 @@
-<div class="arrow-container">
-    <div class="arrow">
-        <fa-icon [icon]="faUp"></fa-icon>
-    </div>
-    <div *ngIf="((page+1) != pages)" class="arrow" [class.show]="show" (click)="navigate(false)" >
-        <fa-icon [icon]="faDown"></fa-icon>
-    </div>
-    <div *ngIf="((page+1) == pages)" class="arrow" [class.show]="show" (click)="navigateTop()" >
-        <span>Back to Top</span>
-    </div>
+<div class="arrow up">
+    <fa-icon [icon]="faUp"></fa-icon>
+</div>
+<div *ngIf="((page+1) != pages)" class="arrow down" [class.show]="show" (click)="navigate(false)" >
+    <fa-icon [icon]="faDown"></fa-icon>
+</div>
+<div *ngIf="((page+1) == pages)" class="arrow down" [class.show]="show" (click)="navigateTop()" >
+    <span>Back to Top</span>
 </div>

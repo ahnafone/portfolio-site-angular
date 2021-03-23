@@ -27,7 +27,7 @@ a:hover {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    width: 60%; height: 60%;
+    width: 60%;
 }
 
 .out-view {
@@ -52,23 +52,26 @@ a:hover {
 
 /* Cover Styles */
 .cover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    width: 60%;
     transition: width 300ms, height 300ms;
 }
 .cover:hover {
-    width: 65%; height: 65%;
+    width: 65%;
     transition: width 300ms, height 300ms;
 }
 .cover img {
+    width: 100%;
     box-shadow: 0 0 8px grey;
 }
 
 
 .cta {
     position: absolute;
-    top: 80%; right: 10%;
+    bottom: 15%; left: 10%;
 }
 .cta button {
     color: var(--sub1);
@@ -90,6 +93,16 @@ a:hover {
 #cta-primary:hover {
     color: var(--sub1);
     background-color: white;
+}
+
+
+/* Projects Start styles */
+#proj-start {
+    text-align: center;
+}
+
+#proj-start h1 {
+    color: var(--sub1);
 }
 
 
