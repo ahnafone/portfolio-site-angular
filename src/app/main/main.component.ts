@@ -58,10 +58,6 @@ export class MainComponent implements OnInit, OnDestroy {
 
       this.prevY = ypos;
     });
-
-
-    // Test Code
-    this.scroll.jumpToPage(2);
   }
 
   ngOnDestroy(): void {
