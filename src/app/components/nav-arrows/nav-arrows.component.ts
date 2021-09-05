@@ -38,7 +38,7 @@ export class NavArrowsComponent implements OnInit, OnDestroy {
     this.show = false;
     setTimeout(() => {
       this.show = true;
-    }, 3000);
+    }, 1000);
   }
 
 
