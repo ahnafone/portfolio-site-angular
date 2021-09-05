@@ -238,7 +238,7 @@ class NavArrowsComponent {
         this.show = false;
         setTimeout(() => {
             this.show = true;
-        }, 3000);
+        }, 1000);
     }
     navigate(dir) {
         if (dir) {
@@ -429,11 +429,11 @@ HairComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, " Technologies used: ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](23, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "strong");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, "Angular and Firebase Cloud Firestore.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, "Angular and Firebase.");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](26, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](27, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](28, " This project is not public. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](28, " The source code for this project is not public. ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } }, styles: [".container[_ngcontent-%COMP%] {\r\n    position: relative;\r\n    width: 80vw;\r\n    height: 80vh;\r\n}\r\n\r\n\r\nh1[_ngcontent-%COMP%] {\r\n    color: var(--main-dark);\r\n    text-align: center;\r\n}\r\n\r\n\r\np[_ngcontent-%COMP%] {\r\n    line-height: 1.35rem;\r\n}\r\n\r\n\r\n.logo[_ngcontent-%COMP%] {\r\n    position: absolute;\r\n    top: 2%;\r\n    right: 2%;\r\n    text-align: right;\r\n    max-width: 30vw;\r\n    font-size: 0.8rem;\r\n    color: grey;\r\n}\r\n\r\n\r\n.logo-text[_ngcontent-%COMP%] {\r\n    font-family: 'Satisfy', cursive;\r\n    color: #D19897;\r\n    font-size: 2.75rem;\r\n    margin: 0;\r\n}\r\n\r\n\r\n.tech[_ngcontent-%COMP%] {\r\n    position: absolute;\r\n    bottom: 2%;\r\n    left: 2%;\r\n\r\n    max-width: 30vw;\r\n    margin-top: 2rem;\r\n    font-size: 0.8rem;\r\n    color: grey;\r\n    margin: 0;\r\n}\r\n\r\n\r\n.img-1[_ngcontent-%COMP%] {\r\n    position: absolute;\r\n    top: 0; left: 0;\r\n    z-index: 1;\r\n}\r\n\r\n\r\n.img-2[_ngcontent-%COMP%] {\r\n    position: absolute;\r\n    bottom: 0;\r\n    right: 0;\r\n    z-index: 3;\r\n}\r\n\r\n\r\n.outer[_ngcontent-%COMP%] {\r\n    flex: 1;\r\n    margin: 10px;\r\n    width: 45vw;\r\n\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n\r\n.inner[_ngcontent-%COMP%] {\r\n    width: 43vw; padding-top: 56.25%;\r\n    overflow: hidden;\r\n    box-shadow: 0 0 5px grey;\r\n    border-radius: 15px;\r\n    transition: width 300ms;\r\n    position: relative;\r\n}\r\n\r\n\r\n.inner[_ngcontent-%COMP%]:hover {\r\n    width: 45vw;\r\n    transition: width 300ms;\r\n}\r\n\r\n\r\n.inner[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\r\n    width: 100%;\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImhhaXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGtCQUFrQjtJQUNsQixXQUFXO0lBQ1gsWUFBWTtBQUNoQjs7O0FBR0E7SUFDSSx1QkFBdUI7SUFDdkIsa0JBQWtCO0FBQ3RCOzs7QUFDQTtJQUNJLG9CQUFvQjtBQUN4Qjs7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsT0FBTztJQUNQLFNBQVM7SUFDVCxpQkFBaUI7SUFDakIsZUFBZTtJQUNmLGlCQUFpQjtJQUNqQixXQUFXO0FBQ2Y7OztBQUNBO0lBQ0ksK0JBQStCO0lBQy9CLGNBQWM7SUFDZCxrQkFBa0I7SUFDbEIsU0FBUztBQUNiOzs7QUFFQTtJQUNJLGtCQUFrQjtJQUNsQixVQUFVO0lBQ1YsUUFBUTs7SUFFUixlQUFlO0lBQ2YsZ0JBQWdCO0lBQ2hCLGlCQUFpQjtJQUNqQixXQUFXO0lBQ1gsU0FBUztBQUNiOzs7QUFHQTtJQUNJLGtCQUFrQjtJQUNsQixNQUFNLEVBQUUsT0FBTztJQUNmLFVBQVU7QUFDZDs7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsU0FBUztJQUNULFFBQVE7SUFDUixVQUFVO0FBQ2Q7OztBQUdBO0lBQ0ksT0FBTztJQUNQLFlBQVk7SUFDWixXQUFXOztJQUVYLGFBQWE7SUFDYix1QkFBdUI7SUFDdkIsbUJBQW1CO0FBQ3ZCOzs7QUFDQTtJQUNJLFdBQVcsRUFBRSxtQkFBbUI7SUFDaEMsZ0JBQWdCO0lBQ2hCLHdCQUF3QjtJQUN4QixtQkFBbUI7SUFDbkIsdUJBQXVCO0lBQ3ZCLGtCQUFrQjtBQUN0Qjs7O0FBQ0E7SUFDSSxXQUFXO0lBQ1gsdUJBQXVCO0FBQzNCOzs7QUFFQTtJQUNJLFdBQVc7SUFDWCxrQkFBa0I7SUFDbEIsTUFBTTtJQUNOLE9BQU87SUFDUCxRQUFRO0FBQ1oiLCJmaWxlIjoiaGFpci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbnRhaW5lciB7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICB3aWR0aDogODB2dztcclxuICAgIGhlaWdodDogODB2aDtcclxufVxyXG5cclxuXHJcbmgxIHtcclxuICAgIGNvbG9yOiB2YXIoLS1tYWluLWRhcmspO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcbnAge1xyXG4gICAgbGluZS1oZWlnaHQ6IDEuMzVyZW07XHJcbn1cclxuXHJcbi5sb2dvIHtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHRvcDogMiU7XHJcbiAgICByaWdodDogMiU7XHJcbiAgICB0ZXh0LWFsaWduOiByaWdodDtcclxuICAgIG1heC13aWR0aDogMzB2dztcclxuICAgIGZvbnQtc2l6ZTogMC44cmVtO1xyXG4gICAgY29sb3I6IGdyZXk7XHJcbn1cclxuLmxvZ28tdGV4dCB7XHJcbiAgICBmb250LWZhbWlseTogJ1NhdGlzZnknLCBjdXJzaXZlO1xyXG4gICAgY29sb3I6ICNEMTk4OTc7XHJcbiAgICBmb250LXNpemU6IDIuNzVyZW07XHJcbiAgICBtYXJnaW46IDA7XHJcbn1cclxuXHJcbi50ZWNoIHtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIGJvdHRvbTogMiU7XHJcbiAgICBsZWZ0OiAyJTtcclxuXHJcbiAgICBtYXgtd2lkdGg6IDMwdnc7XHJcbiAgICBtYXJnaW4tdG9wOiAycmVtO1xyXG4gICAgZm9udC1zaXplOiAwLjhyZW07XHJcbiAgICBjb2xvcjogZ3JleTtcclxuICAgIG1hcmdpbjogMDtcclxufVxyXG5cclxuXHJcbi5pbWctMSB7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6IDA7IGxlZnQ6IDA7XHJcbiAgICB6LWluZGV4OiAxO1xyXG59XHJcblxyXG4uaW1nLTIge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgYm90dG9tOiAwO1xyXG4gICAgcmlnaHQ6IDA7XHJcbiAgICB6LWluZGV4OiAzO1xyXG59XHJcblxyXG5cclxuLm91dGVyIHtcclxuICAgIGZsZXg6IDE7XHJcbiAgICBtYXJnaW46IDEwcHg7XHJcbiAgICB3aWR0aDogNDV2dztcclxuXHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG59XHJcbi5pbm5lciB7XHJcbiAgICB3aWR0aDogNDN2dzsgcGFkZGluZy10b3A6IDU2LjI1JTtcclxuICAgIG92ZXJmbG93OiBoaWRkZW47XHJcbiAgICBib3gtc2hhZG93OiAwIDAgNXB4IGdyZXk7XHJcbiAgICBib3JkZXItcmFkaXVzOiAxNXB4O1xyXG4gICAgdHJhbnNpdGlvbjogd2lkdGggMzAwbXM7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbn1cclxuLmlubmVyOmhvdmVyIHtcclxuICAgIHdpZHRoOiA0NXZ3O1xyXG4gICAgdHJhbnNpdGlvbjogd2lkdGggMzAwbXM7XHJcbn1cclxuXHJcbi5pbm5lciBpbWcge1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6IDA7XHJcbiAgICBsZWZ0OiAwO1xyXG4gICAgcmlnaHQ6IDA7XHJcbn0iXX0= */"] });
@@ -718,7 +718,7 @@ MockComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "Angular, Node.js, Express, MongoDB, jQuery, and EJS.");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](17, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, " This project is not public. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, " The source code for this project is not public. ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](19, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](20, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "em");
@@ -916,7 +916,7 @@ MoodtrackerComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdef
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](17, "p");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](18, " Technologies used: ");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "strong");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](20, "Android Studio and Firebase Cloud Firestore.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](20, "Android Studio and Firebase.");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](21, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](22, " You can also ");
