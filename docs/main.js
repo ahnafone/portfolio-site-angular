@@ -300,7 +300,7 @@ EducationComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefin
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "Education");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "I'm currently doing my Bachelors in Computing Science at the University of Alberta, and I expect to graduate in 2022.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "I'm currently doing my Bachelors in Computing Science at the University of Alberta, and I expect to graduate in April, 2024.");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "p");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, " I have taken courses on Data Structures, Algorithms, Computer Architecture, Software Engineering, Machine Learning, and Computer Networking. ");
